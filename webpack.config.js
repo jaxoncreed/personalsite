@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var extractCSS = new ExtractTextPlugin('style.css');
 
 module.exports = {
   module: {
@@ -8,9 +10,10 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
-      }, {
+        test: /\.scss$/i,
+        loader: extractCSS.extract(['css','sass'])
+      },
+      {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url?limit=10000&mimetype=application/font-woff"
       }, {
@@ -37,5 +40,8 @@ module.exports = {
   output: {
     path: __dirname + '/clientBuild',
     filename: "bundle.js"
-  }
+  },
+  plugins: [
+    extractCSS
+  ]
 };

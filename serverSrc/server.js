@@ -49,6 +49,7 @@ export default function startServer() {
     <html>
       <head>
         <title>Jackson C Morgan</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
       </head>
       <body>
         <div id="root">${html}</div>
