@@ -14,7 +14,7 @@ export default function startServer() {
   // This is fired every time the server side receives a request
   const port = process.env.PORT || 3000
 
-  app.use('/assets', express.static(path.join(__dirname, '../clientBuild/')));
+  app.use('/', express.static(path.join(__dirname, '../clientBuild/')));
   app.use('/*', handleRender)
 
   // We are going to fill these out in the sections to follow
@@ -55,7 +55,7 @@ export default function startServer() {
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}
         </script>
-        <script src="/assets/bundle.js"></script>
+        <script src="/bundle.js"></script>
       </body>
     </html>
     `
