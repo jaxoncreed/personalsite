@@ -6,7 +6,7 @@ const Home = React.createClass({
       <div className="home">
         <div className="banner-container">
           <h1>jackson c morgan</h1>
-          <p>computer scientist</p>
+          <p>software engineer</p>
           <div className="buttonNavigation">
             <a href="https://medium.com/search?q=%40JacksonMorgan%20tech" className="linkButton">
               tech blog
