@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node serverBuild/index.js",
-    "build": "webpack",
+    "build": "webpack & babel serverSrc --out-dir serverBuild",
     "dev": "webpack --watch & babel-watch serverSrc/index.js",
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
