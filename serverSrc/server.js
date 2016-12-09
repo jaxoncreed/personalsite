@@ -48,11 +48,13 @@ export default function startServer() {
     <!doctype html>
     <html>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.png" />
         <title>Jackson C Morgan</title>
         <link rel="stylesheet" type="text/css" href="/style.css">
       </head>
       <body>
-        <div id="root">${html}</div>
+        <div id="root"><div>${html}</div></div>
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}
         </script>

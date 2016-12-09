@@ -1,13 +1,14 @@
 import React from 'react';
+const docId = '0B7a9cBFHr0AYeUFSOUlnT1FhSFU';
+const resumeDisplayLink = 'https://drive.google.com/uc?id=' + docId;
 
 const Resume = React.createClass({
   render() {
     return (
-      <div className="home">
-        <div className="banner-container">
-          <h1>Resume</h1>
-        </div>
+      <div className="resume">
+        <embed src={resumeDisplayLink} height="100%" width="100%" type="application/pdf" />
       </div>
+
     );
   }
 });
